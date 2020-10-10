@@ -1,9 +1,11 @@
 import 'package:ecommerce_app/constValues/constanst.dart';
 import 'package:ecommerce_app/constValues/size_config.dart';
+import 'package:ecommerce_app/screens/sign_in/sign_in_screen.dart';
 import 'package:flutter/material.dart';
 //This is the best practice
+import '../../../constValues/constanst.dart';
 import '../components/splash_content.dart';
-import '../components/default_button.dart';
+import '../../../components/default_button.dart';
 
 class Body extends StatefulWidget {
   @override
@@ -14,19 +16,19 @@ class _BodyState extends State<Body> {
   int currentPage = 0;
   List<Map<String, String>> splashData = [
     {
-      "text": "Welcome to Freeon, Let's shop!",
-      "image": "assets/images/splash_1.png",
+      "text": "$kCompanyName Mobil Satış Uygulamasına hoşgeldiniz.",
+      "image": "assets/images/splash_1.png"
     },
     {
-      "text":
-          "We help people connect with store \naround United State of America",
+      "text": "Birbirinden kaliteli ürünler elinizin altında",
       "image": "assets/images/splash_2.png"
     },
     {
-      "text": "We show the easy way to shop. \nJust stay at home with us",
+      "text": "Artık hazırsınız. Hadi başlayalım...",
       "image": "assets/images/splash_3.png"
     }
   ];
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -64,11 +66,12 @@ class _BodyState extends State<Body> {
                         ),
                       Spacer(flex: 3,),
                       DefaultButton(
-                        text: "Giriş",
+                        text: "Devam et",
                         press: (){
+                          Navigator.pushNamed(context, SignInScreen.routeName);
                         }
                       ),
-                      Spacer()
+                      Spacer(flex: 2,)
                     ],
                   ),
                 ))

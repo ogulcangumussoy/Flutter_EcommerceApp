@@ -2,6 +2,8 @@ import 'package:ecommerce_app/constValues/constanst.dart';
 import 'package:ecommerce_app/constValues/size_config.dart';
 import 'package:flutter/material.dart';
 
+import '../../../constValues/constanst.dart';
+
 
 class SplashContent extends StatelessWidget {
   const SplashContent({
@@ -16,7 +18,7 @@ class SplashContent extends StatelessWidget {
     return Column(
       children: <Widget>[
         Spacer(),
-        Text("FREEON",
+        Text(kCompanyName.toUpperCase(),
             style: TextStyle(
                 fontSize: getProportionateScreenWidth(36),
                 color: kPrimaryColor,
